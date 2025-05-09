@@ -1,0 +1,5 @@
+pandas
+pillow
+pymong
+streamlit
+streamlit-option-menu
