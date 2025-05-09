@@ -1,5 +1,5 @@
 pandas
 pillow
-pymong
+pymongo
 streamlit
 streamlit-option-menu
