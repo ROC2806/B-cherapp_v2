@@ -158,7 +158,7 @@ elif page == "Übersicht":
                     return False
                 return False
             filtered_df = filtered_df[filtered_df["Gelesen am"].apply(match_date_range)]
-
+        st.markdown("---")
         st.markdown(f"##### Gefundene Bücher: {len(filtered_df)}")
 
         if "Gelesen am" in filtered_df.columns:
