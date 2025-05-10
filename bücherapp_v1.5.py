@@ -112,8 +112,8 @@ elif page == "Übersicht":
         with col1:
             search = st.text_input("Titel oder Autor suchen")
 
-        all_genres = df["Genre"].dropna().unique()
-        all_authors = df["Autor"].dropna().unique()
+        all_genres = sorted(df["Genre"].dropna().unique())
+        all_authors = sorted(df["Autor"].dropna().unique())
 
         with col2:
             selected_author = st.selectbox("Autor filtern", options=["Alle"] + list(all_authors))
@@ -126,7 +126,7 @@ elif page == "Übersicht":
             selected_genre = st.selectbox("Genre filtern", options=genre_options)
 
         # Nationalität-Filter
-        all_nationalities = df["Nationalität"].dropna().unique()
+        all_nationalities = sorted(df["Nationalität"].dropna().unique())
 
         col_dfrom, col_dto, col_nat = st.columns(3)
         date_from = col_dfrom.date_input("Gelesen ab", value=None, key="date_from")
