@@ -171,7 +171,7 @@ elif page == "Übersicht":
              filtered_df["Gelesen am (Mehrfach)"] = "-"
 
         st.dataframe(
-            filtered_df[["Titel", "Autor", "Genre", "Erhalten durch", "Gelesen am (Mehrfach)", "Nationalität"]],
+            filtered_df[["Titel", "Autor", "Genre", "Erhalten durch", "Gelesen am (Mehrfach)", "Nationalität"]].fillna("-"),
             use_container_width=True
         )
 
