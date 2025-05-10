@@ -86,11 +86,13 @@ if page == "Wunschliste":
                 delete_wishlist_entry(book["_id"])
                 data["read_books"].append(book)
                 save_data(data)
+                st.success("Buch hinzugefügt!")
                 st.rerun()
 
         with col3:
             if st.button("🗑️ Entfernen", key=f"entfernen_{book['_id']}"):
                 delete_wishlist_entry(book["_id"])
+                st.success("Buch entfernt!")
                 st.rerun()
 
 # ----------------------------
