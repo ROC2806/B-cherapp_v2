@@ -165,10 +165,10 @@ elif page == "Übersicht":
 
         if "Gelesen am" in filtered_df.columns:
             filtered_df["Gelesen am (Mehrfach)"] = filtered_df["Gelesen am"].apply(
-                lambda x: ", ".join(x) if isinstance(x, list) else str(x)
+                lambda x: ", ".join(x) if isinstance(x, list) else str(x) if pd.notnull(x) else "-"
             )
         else:
-            filtered_df["Gelesen am (Mehrfach)"] = "-"
+             filtered_df["Gelesen am (Mehrfach)"] = "-"
 
         st.dataframe(
             filtered_df[["Titel", "Autor", "Genre", "Erhalten durch", "Gelesen am (Mehrfach)", "Nationalität"]],
