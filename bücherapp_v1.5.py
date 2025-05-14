@@ -45,7 +45,7 @@ if page == "Wunschliste":
             "Roman", "Krimi & Thriller", "Fantasy & Science-Fiction", "Historisch", "Liebesgeschichte",
             "Abenteuer", "Horror & Mystery", "Biografie & Memoiren", "Sachbuch", "Ratgeber",
             "Kinder- & Jugendbuch", "Poesie & Kurzgeschichten", "Gesellschaft & Politik",
-            "Spiritualität & Religion", "Klassiker", "Anderes"
+            "Spiritualität & Religion", "Klassiker", "Anderes", "Novelle", "Dystopie"
         ])
         nationality = st.text_input("Nationalität des Autors")
         submit = st.form_submit_button("Zur Wunschliste hinzufügen")
